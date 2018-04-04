@@ -1534,7 +1534,17 @@ e.Index.prototype.use=function(e){var t=Array.prototype.slice.call(arguments,1);
               <ul class="toc-list-h2">
                 
                   <li>
-                    <a href="#getgreeting" class="toc-h2 toc-link" data-title="getGreeting">getGreeting</a>
+                    <a href="#getoneof" class="toc-h2 toc-link" data-title="getOneOf">getOneOf</a>
+                    
+                  </li>
+                
+                  <li>
+                    <a href="#getanyof" class="toc-h2 toc-link" data-title="getAnyOf">getAnyOf</a>
+                    
+                  </li>
+                
+                  <li>
+                    <a href="#getallof" class="toc-h2 toc-link" data-title="getAllOf">getAllOf</a>
                     
                   </li>
                 
@@ -1563,17 +1573,17 @@ e.Index.prototype.use=function(e){var t=Array.prototype.slice.call(arguments,1);
 <li><a href="http://example.com">http://example.com</a></li>
 </ul>
 <h1 id="Example-API-Endpoints">Endpoints</h1>
-<h2 id="getgreeting">getGreeting</h2>
-<p><a id="opIdgetGreeting"></a></p>
+<h2 id="getoneof">getOneOf</h2>
+<p><a id="opIdgetOneOf"></a></p>
 <blockquote>
 <p>Code samples</p>
 </blockquote>
 <pre class="highlight tab tab-shell"><code><span class="hljs-comment"># You can also use wget</span>
-curl -X GET http://example.com/greeting \
+curl -X GET http://example.com/one-of \
   -H <span class="hljs-string">'Accept: application/json'</span>
 
 </code></pre>
-<pre class="highlight tab tab-http"><code><span class="hljs-keyword">GET</span> <span class="hljs-string">http://example.com/greeting</span> HTTP/1.1
+<pre class="highlight tab tab-http"><code><span class="hljs-keyword">GET</span> <span class="hljs-string">http://example.com/one-of</span> HTTP/1.1
 <span class="hljs-attribute">Host</span>: example.com
 
 <span class="http"><span class="hljs-attribute">Accept</span>: application/json
@@ -1585,7 +1595,7 @@ curl -X GET http://example.com/greeting \
 };
 
 $.ajax({
-  <span class="hljs-attr">url</span>: <span class="hljs-string">'http://example.com/greeting'</span>,
+  <span class="hljs-attr">url</span>: <span class="hljs-string">'http://example.com/one-of'</span>,
   <span class="hljs-attr">method</span>: <span class="hljs-string">'get'</span>,
 
   <span class="hljs-attr">headers</span>: headers,
@@ -1602,7 +1612,7 @@ $.ajax({
 
 };
 
-fetch(<span class="hljs-string">'http://example.com/greeting'</span>,
+fetch(<span class="hljs-string">'http://example.com/one-of'</span>,
 {
   <span class="hljs-attr">method</span>: <span class="hljs-string">'GET'</span>,
 
@@ -1622,7 +1632,7 @@ headers = {
   <span class="hljs-string">'Accept'</span> =&gt; <span class="hljs-string">'application/json'</span>
 }
 
-result = RestClient.get <span class="hljs-string">'http://example.com/greeting'</span>,
+result = RestClient.get <span class="hljs-string">'http://example.com/one-of'</span>,
   <span class="hljs-symbol">params:</span> {
   }, <span class="hljs-symbol">headers:</span> headers
 
@@ -1634,14 +1644,14 @@ headers = {
   <span class="hljs-string">'Accept'</span>: <span class="hljs-string">'application/json'</span>
 }
 
-r = requests.get(<span class="hljs-string">'http://example.com/greeting'</span>, params={
+r = requests.get(<span class="hljs-string">'http://example.com/one-of'</span>, params={
 
 }, headers = headers)
 
 <span class="hljs-keyword">print</span> r.json()
 
 </code></pre>
-<pre class="highlight tab tab-java"><code>URL obj = <span class="hljs-keyword">new</span> URL(<span class="hljs-string">"http://example.com/greeting"</span>);
+<pre class="highlight tab tab-java"><code>URL obj = <span class="hljs-keyword">new</span> URL(<span class="hljs-string">"http://example.com/one-of"</span>);
 HttpURLConnection con = (HttpURLConnection) obj.openConnection();
 con.setRequestMethod(<span class="hljs-string">"GET"</span>);
 <span class="hljs-keyword">int</span> responseCode = con.getResponseCode();
@@ -1671,7 +1681,7 @@ System.out.println(response.toString());
     }
 
     data := bytes.NewBuffer([]<span class="hljs-keyword">byte</span>{jsonReq})
-    req, err := http.NewRequest(<span class="hljs-string">"GET"</span>, <span class="hljs-string">"http://example.com/greeting"</span>, data)
+    req, err := http.NewRequest(<span class="hljs-string">"GET"</span>, <span class="hljs-string">"http://example.com/one-of"</span>, data)
     req.Header = headers
 
     client := &amp;http.Client{}
@@ -1680,7 +1690,7 @@ System.out.println(response.toString());
 }
 
 </code></pre>
-<p><code>GET /greeting</code></p>
+<p><code>GET /one-of</code></p>
 <p>Retrieves an greeting</p>
 <blockquote>
 <p>Example responses</p>
@@ -1692,7 +1702,7 @@ System.out.println(response.toString());
   }
 }
 </code></pre>
-<h3 id="getGreeting-responses">Responses</h3>
+<h3 id="getOneOf-responses">Responses</h3>
 <table>
 <thead>
 <tr>
@@ -1711,7 +1721,7 @@ System.out.println(response.toString());
 </tr>
 </tbody>
 </table>
-<h3 id="getGreeting-responseschema">Response Schema</h3>
+<h3 id="getOneOf-responseschema">Response Schema</h3>
 <p>Status Code <strong>200</strong></p>
 <table>
 <thead>
@@ -1734,6 +1744,360 @@ System.out.println(response.toString());
 <p><em>oneOf</em></p>
 <p>|»» <em>anonymous</em>|string|false|No description|</p>
 <p><em>xor</em></p>
+<p>|»» <em>anonymous</em>|object|false|No description|
+|»»» message1|string|true|No description|
+|»»» message2|string|true|No description|</p>
+<aside class="success">
+This operation does not require authentication
+</aside>
+<h2 id="getanyof">getAnyOf</h2>
+<p><a id="opIdgetAnyOf"></a></p>
+<blockquote>
+<p>Code samples</p>
+</blockquote>
+<pre class="highlight tab tab-shell"><code><span class="hljs-comment"># You can also use wget</span>
+curl -X GET http://example.com/any-of \
+  -H <span class="hljs-string">'Accept: application/json'</span>
+
+</code></pre>
+<pre class="highlight tab tab-http"><code><span class="hljs-keyword">GET</span> <span class="hljs-string">http://example.com/any-of</span> HTTP/1.1
+<span class="hljs-attribute">Host</span>: example.com
+
+<span class="http"><span class="hljs-attribute">Accept</span>: application/json
+
+<span class="undefined"></span></span></code></pre>
+<pre class="highlight tab tab-javascript"><code><span class="hljs-keyword">var</span> headers = {
+  <span class="hljs-string">'Accept'</span>:<span class="hljs-string">'application/json'</span>
+
+};
+
+$.ajax({
+  <span class="hljs-attr">url</span>: <span class="hljs-string">'http://example.com/any-of'</span>,
+  <span class="hljs-attr">method</span>: <span class="hljs-string">'get'</span>,
+
+  <span class="hljs-attr">headers</span>: headers,
+  <span class="hljs-attr">success</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">data</span>) </span>{
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-built_in">JSON</span>.stringify(data));
+  }
+})
+
+</code></pre>
+<pre class="highlight tab tab-javascript--nodejs"><code><span class="hljs-keyword">const</span> request = <span class="hljs-built_in">require</span>(<span class="hljs-string">'node-fetch'</span>);
+
+<span class="hljs-keyword">const</span> headers = {
+  <span class="hljs-string">'Accept'</span>:<span class="hljs-string">'application/json'</span>
+
+};
+
+fetch(<span class="hljs-string">'http://example.com/any-of'</span>,
+{
+  <span class="hljs-attr">method</span>: <span class="hljs-string">'GET'</span>,
+
+  <span class="hljs-attr">headers</span>: headers
+})
+.then(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">res</span>) </span>{
+    <span class="hljs-keyword">return</span> res.json();
+}).then(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">body</span>) </span>{
+    <span class="hljs-built_in">console</span>.log(body);
+});
+
+</code></pre>
+<pre class="highlight tab tab-ruby"><code><span class="hljs-keyword">require</span> <span class="hljs-string">'rest-client'</span>
+<span class="hljs-keyword">require</span> <span class="hljs-string">'json'</span>
+
+headers = {
+  <span class="hljs-string">'Accept'</span> =&gt; <span class="hljs-string">'application/json'</span>
+}
+
+result = RestClient.get <span class="hljs-string">'http://example.com/any-of'</span>,
+  <span class="hljs-symbol">params:</span> {
+  }, <span class="hljs-symbol">headers:</span> headers
+
+p JSON.parse(result)
+
+</code></pre>
+<pre class="highlight tab tab-python"><code><span class="hljs-keyword">import</span> requests
+headers = {
+  <span class="hljs-string">'Accept'</span>: <span class="hljs-string">'application/json'</span>
+}
+
+r = requests.get(<span class="hljs-string">'http://example.com/any-of'</span>, params={
+
+}, headers = headers)
+
+<span class="hljs-keyword">print</span> r.json()
+
+</code></pre>
+<pre class="highlight tab tab-java"><code>URL obj = <span class="hljs-keyword">new</span> URL(<span class="hljs-string">"http://example.com/any-of"</span>);
+HttpURLConnection con = (HttpURLConnection) obj.openConnection();
+con.setRequestMethod(<span class="hljs-string">"GET"</span>);
+<span class="hljs-keyword">int</span> responseCode = con.getResponseCode();
+BufferedReader in = <span class="hljs-keyword">new</span> BufferedReader(
+    <span class="hljs-keyword">new</span> InputStreamReader(con.getInputStream()));
+String inputLine;
+StringBuffer response = <span class="hljs-keyword">new</span> StringBuffer();
+<span class="hljs-keyword">while</span> ((inputLine = in.readLine()) != <span class="hljs-keyword">null</span>) {
+    response.append(inputLine);
+}
+in.close();
+System.out.println(response.toString());
+
+</code></pre>
+<pre class="highlight tab tab-go"><code><span class="hljs-keyword">package</span> main
+
+<span class="hljs-keyword">import</span> (
+       <span class="hljs-string">"bytes"</span>
+       <span class="hljs-string">"net/http"</span>
+)
+
+<span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span> {
+
+    headers := <span class="hljs-keyword">map</span>[<span class="hljs-keyword">string</span>][]<span class="hljs-keyword">string</span>{
+        <span class="hljs-string">"Accept"</span>: []<span class="hljs-keyword">string</span>{<span class="hljs-string">"application/json"</span>},
+        
+    }
+
+    data := bytes.NewBuffer([]<span class="hljs-keyword">byte</span>{jsonReq})
+    req, err := http.NewRequest(<span class="hljs-string">"GET"</span>, <span class="hljs-string">"http://example.com/any-of"</span>, data)
+    req.Header = headers
+
+    client := &amp;http.Client{}
+    resp, err := client.Do(req)
+    <span class="hljs-comment">// ...</span>
+}
+
+</code></pre>
+<p><code>GET /any-of</code></p>
+<p>Retrieves an greeting</p>
+<blockquote>
+<p>Example responses</p>
+</blockquote>
+<pre class="highlight tab tab-json"><code>{
+  <span class="hljs-attr">"description"</span>: <span class="hljs-string">"Successfull response"</span>,
+  <span class="hljs-attr">"value"</span>: {
+    <span class="hljs-attr">"greeting"</span>: <span class="hljs-string">"Hello!"</span>
+  }
+}
+</code></pre>
+<h3 id="getAnyOf-responses">Responses</h3>
+<table>
+<thead>
+<tr>
+<th>Status</th>
+<th>Meaning</th>
+<th>Description</th>
+<th>Schema</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>200</td>
+<td><a href="https://tools.ietf.org/html/rfc7231#section-6.3.1">OK</a></td>
+<td>Responds with a greeting</td>
+<td>Inline</td>
+</tr>
+</tbody>
+</table>
+<h3 id="getAnyOf-responseschema">Response Schema</h3>
+<p>Status Code <strong>200</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>» greeting</td>
+<td>any</td>
+<td>true</td>
+<td>No description</td>
+</tr>
+</tbody>
+</table>
+<p><em>anyOf</em></p>
+<p>|»» <em>anonymous</em>|string|false|No description|</p>
+<p><em>or</em></p>
+<p>|»» <em>anonymous</em>|object|false|No description|
+|»»» message1|string|true|No description|
+|»»» message2|string|true|No description|</p>
+<aside class="success">
+This operation does not require authentication
+</aside>
+<h2 id="getallof">getAllOf</h2>
+<p><a id="opIdgetAllOf"></a></p>
+<blockquote>
+<p>Code samples</p>
+</blockquote>
+<pre class="highlight tab tab-shell"><code><span class="hljs-comment"># You can also use wget</span>
+curl -X GET http://example.com/all-of \
+  -H <span class="hljs-string">'Accept: application/json'</span>
+
+</code></pre>
+<pre class="highlight tab tab-http"><code><span class="hljs-keyword">GET</span> <span class="hljs-string">http://example.com/all-of</span> HTTP/1.1
+<span class="hljs-attribute">Host</span>: example.com
+
+<span class="http"><span class="hljs-attribute">Accept</span>: application/json
+
+<span class="undefined"></span></span></code></pre>
+<pre class="highlight tab tab-javascript"><code><span class="hljs-keyword">var</span> headers = {
+  <span class="hljs-string">'Accept'</span>:<span class="hljs-string">'application/json'</span>
+
+};
+
+$.ajax({
+  <span class="hljs-attr">url</span>: <span class="hljs-string">'http://example.com/all-of'</span>,
+  <span class="hljs-attr">method</span>: <span class="hljs-string">'get'</span>,
+
+  <span class="hljs-attr">headers</span>: headers,
+  <span class="hljs-attr">success</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">data</span>) </span>{
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-built_in">JSON</span>.stringify(data));
+  }
+})
+
+</code></pre>
+<pre class="highlight tab tab-javascript--nodejs"><code><span class="hljs-keyword">const</span> request = <span class="hljs-built_in">require</span>(<span class="hljs-string">'node-fetch'</span>);
+
+<span class="hljs-keyword">const</span> headers = {
+  <span class="hljs-string">'Accept'</span>:<span class="hljs-string">'application/json'</span>
+
+};
+
+fetch(<span class="hljs-string">'http://example.com/all-of'</span>,
+{
+  <span class="hljs-attr">method</span>: <span class="hljs-string">'GET'</span>,
+
+  <span class="hljs-attr">headers</span>: headers
+})
+.then(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">res</span>) </span>{
+    <span class="hljs-keyword">return</span> res.json();
+}).then(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">body</span>) </span>{
+    <span class="hljs-built_in">console</span>.log(body);
+});
+
+</code></pre>
+<pre class="highlight tab tab-ruby"><code><span class="hljs-keyword">require</span> <span class="hljs-string">'rest-client'</span>
+<span class="hljs-keyword">require</span> <span class="hljs-string">'json'</span>
+
+headers = {
+  <span class="hljs-string">'Accept'</span> =&gt; <span class="hljs-string">'application/json'</span>
+}
+
+result = RestClient.get <span class="hljs-string">'http://example.com/all-of'</span>,
+  <span class="hljs-symbol">params:</span> {
+  }, <span class="hljs-symbol">headers:</span> headers
+
+p JSON.parse(result)
+
+</code></pre>
+<pre class="highlight tab tab-python"><code><span class="hljs-keyword">import</span> requests
+headers = {
+  <span class="hljs-string">'Accept'</span>: <span class="hljs-string">'application/json'</span>
+}
+
+r = requests.get(<span class="hljs-string">'http://example.com/all-of'</span>, params={
+
+}, headers = headers)
+
+<span class="hljs-keyword">print</span> r.json()
+
+</code></pre>
+<pre class="highlight tab tab-java"><code>URL obj = <span class="hljs-keyword">new</span> URL(<span class="hljs-string">"http://example.com/all-of"</span>);
+HttpURLConnection con = (HttpURLConnection) obj.openConnection();
+con.setRequestMethod(<span class="hljs-string">"GET"</span>);
+<span class="hljs-keyword">int</span> responseCode = con.getResponseCode();
+BufferedReader in = <span class="hljs-keyword">new</span> BufferedReader(
+    <span class="hljs-keyword">new</span> InputStreamReader(con.getInputStream()));
+String inputLine;
+StringBuffer response = <span class="hljs-keyword">new</span> StringBuffer();
+<span class="hljs-keyword">while</span> ((inputLine = in.readLine()) != <span class="hljs-keyword">null</span>) {
+    response.append(inputLine);
+}
+in.close();
+System.out.println(response.toString());
+
+</code></pre>
+<pre class="highlight tab tab-go"><code><span class="hljs-keyword">package</span> main
+
+<span class="hljs-keyword">import</span> (
+       <span class="hljs-string">"bytes"</span>
+       <span class="hljs-string">"net/http"</span>
+)
+
+<span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span> {
+
+    headers := <span class="hljs-keyword">map</span>[<span class="hljs-keyword">string</span>][]<span class="hljs-keyword">string</span>{
+        <span class="hljs-string">"Accept"</span>: []<span class="hljs-keyword">string</span>{<span class="hljs-string">"application/json"</span>},
+        
+    }
+
+    data := bytes.NewBuffer([]<span class="hljs-keyword">byte</span>{jsonReq})
+    req, err := http.NewRequest(<span class="hljs-string">"GET"</span>, <span class="hljs-string">"http://example.com/all-of"</span>, data)
+    req.Header = headers
+
+    client := &amp;http.Client{}
+    resp, err := client.Do(req)
+    <span class="hljs-comment">// ...</span>
+}
+
+</code></pre>
+<p><code>GET /all-of</code></p>
+<p>Retrieves an greeting</p>
+<blockquote>
+<p>Example responses</p>
+</blockquote>
+<pre class="highlight tab tab-json"><code>{
+  <span class="hljs-attr">"description"</span>: <span class="hljs-string">"Successfull response"</span>,
+  <span class="hljs-attr">"value"</span>: {
+    <span class="hljs-attr">"greeting"</span>: <span class="hljs-string">"Hello!"</span>
+  }
+}
+</code></pre>
+<h3 id="getAllOf-responses">Responses</h3>
+<table>
+<thead>
+<tr>
+<th>Status</th>
+<th>Meaning</th>
+<th>Description</th>
+<th>Schema</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>200</td>
+<td><a href="https://tools.ietf.org/html/rfc7231#section-6.3.1">OK</a></td>
+<td>Responds with a greeting</td>
+<td>Inline</td>
+</tr>
+</tbody>
+</table>
+<h3 id="getAllOf-responseschema">Response Schema</h3>
+<p>Status Code <strong>200</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>» greeting</td>
+<td>any</td>
+<td>true</td>
+<td>No description</td>
+</tr>
+</tbody>
+</table>
+<p><em>allOf</em></p>
+<p>|»» <em>anonymous</em>|string|false|No description|</p>
+<p><em>and</em></p>
 <p>|»» <em>anonymous</em>|object|false|No description|
 |»»» message1|string|true|No description|
 |»»» message2|string|true|No description|</p>

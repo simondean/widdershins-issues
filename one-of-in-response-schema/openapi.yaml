@@ -7,18 +7,52 @@ servers:
     - url: http://example.com
       description: Example URL
 paths:
-    /greeting:
+    /one-of:
         get: 
             tags: [Endpoints]
             description: Retrieves an greeting
-            operationId: getGreeting
+            operationId: getOneOf
             responses:
                 '200': 
                     description: Responds with a greeting
                     content: 
                         application/json:
                             schema: 
-                                $ref: schemas/get-greeting/response/200.json
+                                $ref: schemas/get-one-of/response/200.json
+                            examples:
+                                default:
+                                    description: Successfull response
+                                    value:
+                                        $ref: examples/get-greeting/response/200/default.json
+    /any-of:
+        get: 
+            tags: [Endpoints]
+            description: Retrieves an greeting
+            operationId: getAnyOf
+            responses:
+                '200': 
+                    description: Responds with a greeting
+                    content: 
+                        application/json:
+                            schema: 
+                                $ref: schemas/get-any-of/response/200.json
+                            examples:
+                                default:
+                                    description: Successfull response
+                                    value:
+                                        $ref: examples/get-greeting/response/200/default.json
+    /all-of:
+        get: 
+            tags: [Endpoints]
+            description: Retrieves an greeting
+            operationId: getAllOf
+            responses:
+                '200': 
+                    description: Responds with a greeting
+                    content: 
+                        application/json:
+                            schema: 
+                                $ref: schemas/get-all-of/response/200.json
                             examples:
                                 default:
                                     description: Successfull response

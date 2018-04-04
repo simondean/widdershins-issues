@@ -29,21 +29,21 @@ Base URLs:
 
 <h1 id="Example-API-Endpoints">Endpoints</h1>
 
-## getGreeting
+## getOneOf
 
-<a id="opIdgetGreeting"></a>
+<a id="opIdgetOneOf"></a>
 
 > Code samples
 
 ```shell
 # You can also use wget
-curl -X GET http://example.com/greeting \
+curl -X GET http://example.com/one-of \
   -H 'Accept: application/json'
 
 ```
 
 ```http
-GET http://example.com/greeting HTTP/1.1
+GET http://example.com/one-of HTTP/1.1
 Host: example.com
 
 Accept: application/json
@@ -57,7 +57,7 @@ var headers = {
 };
 
 $.ajax({
-  url: 'http://example.com/greeting',
+  url: 'http://example.com/one-of',
   method: 'get',
 
   headers: headers,
@@ -76,7 +76,7 @@ const headers = {
 
 };
 
-fetch('http://example.com/greeting',
+fetch('http://example.com/one-of',
 {
   method: 'GET',
 
@@ -98,7 +98,7 @@ headers = {
   'Accept' => 'application/json'
 }
 
-result = RestClient.get 'http://example.com/greeting',
+result = RestClient.get 'http://example.com/one-of',
   params: {
   }, headers: headers
 
@@ -112,7 +112,7 @@ headers = {
   'Accept': 'application/json'
 }
 
-r = requests.get('http://example.com/greeting', params={
+r = requests.get('http://example.com/one-of', params={
 
 }, headers = headers)
 
@@ -121,7 +121,7 @@ print r.json()
 ```
 
 ```java
-URL obj = new URL("http://example.com/greeting");
+URL obj = new URL("http://example.com/one-of");
 HttpURLConnection con = (HttpURLConnection) obj.openConnection();
 con.setRequestMethod("GET");
 int responseCode = con.getResponseCode();
@@ -153,7 +153,7 @@ func main() {
     }
 
     data := bytes.NewBuffer([]byte{jsonReq})
-    req, err := http.NewRequest("GET", "http://example.com/greeting", data)
+    req, err := http.NewRequest("GET", "http://example.com/one-of", data)
     req.Header = headers
 
     client := &http.Client{}
@@ -163,7 +163,7 @@ func main() {
 
 ```
 
-`GET /greeting`
+`GET /one-of`
 
 Retrieves an greeting
 
@@ -178,13 +178,13 @@ Retrieves an greeting
 }
 ```
 
-<h3 id="getGreeting-responses">Responses</h3>
+<h3 id="getOneOf-responses">Responses</h3>
 
 |Status|Meaning|Description|Schema|
 |---|---|---|---|
 |200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|Responds with a greeting|Inline|
 
-<h3 id="getGreeting-responseschema">Response Schema</h3>
+<h3 id="getOneOf-responseschema">Response Schema</h3>
 
 Status Code **200**
 
@@ -197,6 +197,360 @@ Status Code **200**
 |»» *anonymous*|string|false|No description|
 
 *xor*
+
+|»» *anonymous*|object|false|No description|
+|»»» message1|string|true|No description|
+|»»» message2|string|true|No description|
+
+<aside class="success">
+This operation does not require authentication
+</aside>
+
+## getAnyOf
+
+<a id="opIdgetAnyOf"></a>
+
+> Code samples
+
+```shell
+# You can also use wget
+curl -X GET http://example.com/any-of \
+  -H 'Accept: application/json'
+
+```
+
+```http
+GET http://example.com/any-of HTTP/1.1
+Host: example.com
+
+Accept: application/json
+
+```
+
+```javascript
+var headers = {
+  'Accept':'application/json'
+
+};
+
+$.ajax({
+  url: 'http://example.com/any-of',
+  method: 'get',
+
+  headers: headers,
+  success: function(data) {
+    console.log(JSON.stringify(data));
+  }
+})
+
+```
+
+```javascript--nodejs
+const request = require('node-fetch');
+
+const headers = {
+  'Accept':'application/json'
+
+};
+
+fetch('http://example.com/any-of',
+{
+  method: 'GET',
+
+  headers: headers
+})
+.then(function(res) {
+    return res.json();
+}).then(function(body) {
+    console.log(body);
+});
+
+```
+
+```ruby
+require 'rest-client'
+require 'json'
+
+headers = {
+  'Accept' => 'application/json'
+}
+
+result = RestClient.get 'http://example.com/any-of',
+  params: {
+  }, headers: headers
+
+p JSON.parse(result)
+
+```
+
+```python
+import requests
+headers = {
+  'Accept': 'application/json'
+}
+
+r = requests.get('http://example.com/any-of', params={
+
+}, headers = headers)
+
+print r.json()
+
+```
+
+```java
+URL obj = new URL("http://example.com/any-of");
+HttpURLConnection con = (HttpURLConnection) obj.openConnection();
+con.setRequestMethod("GET");
+int responseCode = con.getResponseCode();
+BufferedReader in = new BufferedReader(
+    new InputStreamReader(con.getInputStream()));
+String inputLine;
+StringBuffer response = new StringBuffer();
+while ((inputLine = in.readLine()) != null) {
+    response.append(inputLine);
+}
+in.close();
+System.out.println(response.toString());
+
+```
+
+```go
+package main
+
+import (
+       "bytes"
+       "net/http"
+)
+
+func main() {
+
+    headers := map[string][]string{
+        "Accept": []string{"application/json"},
+        
+    }
+
+    data := bytes.NewBuffer([]byte{jsonReq})
+    req, err := http.NewRequest("GET", "http://example.com/any-of", data)
+    req.Header = headers
+
+    client := &http.Client{}
+    resp, err := client.Do(req)
+    // ...
+}
+
+```
+
+`GET /any-of`
+
+Retrieves an greeting
+
+> Example responses
+
+```json
+{
+  "description": "Successfull response",
+  "value": {
+    "greeting": "Hello!"
+  }
+}
+```
+
+<h3 id="getAnyOf-responses">Responses</h3>
+
+|Status|Meaning|Description|Schema|
+|---|---|---|---|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|Responds with a greeting|Inline|
+
+<h3 id="getAnyOf-responseschema">Response Schema</h3>
+
+Status Code **200**
+
+|Name|Type|Required|Description|
+|---|---|---|---|
+|» greeting|any|true|No description|
+
+*anyOf*
+
+|»» *anonymous*|string|false|No description|
+
+*or*
+
+|»» *anonymous*|object|false|No description|
+|»»» message1|string|true|No description|
+|»»» message2|string|true|No description|
+
+<aside class="success">
+This operation does not require authentication
+</aside>
+
+## getAllOf
+
+<a id="opIdgetAllOf"></a>
+
+> Code samples
+
+```shell
+# You can also use wget
+curl -X GET http://example.com/all-of \
+  -H 'Accept: application/json'
+
+```
+
+```http
+GET http://example.com/all-of HTTP/1.1
+Host: example.com
+
+Accept: application/json
+
+```
+
+```javascript
+var headers = {
+  'Accept':'application/json'
+
+};
+
+$.ajax({
+  url: 'http://example.com/all-of',
+  method: 'get',
+
+  headers: headers,
+  success: function(data) {
+    console.log(JSON.stringify(data));
+  }
+})
+
+```
+
+```javascript--nodejs
+const request = require('node-fetch');
+
+const headers = {
+  'Accept':'application/json'
+
+};
+
+fetch('http://example.com/all-of',
+{
+  method: 'GET',
+
+  headers: headers
+})
+.then(function(res) {
+    return res.json();
+}).then(function(body) {
+    console.log(body);
+});
+
+```
+
+```ruby
+require 'rest-client'
+require 'json'
+
+headers = {
+  'Accept' => 'application/json'
+}
+
+result = RestClient.get 'http://example.com/all-of',
+  params: {
+  }, headers: headers
+
+p JSON.parse(result)
+
+```
+
+```python
+import requests
+headers = {
+  'Accept': 'application/json'
+}
+
+r = requests.get('http://example.com/all-of', params={
+
+}, headers = headers)
+
+print r.json()
+
+```
+
+```java
+URL obj = new URL("http://example.com/all-of");
+HttpURLConnection con = (HttpURLConnection) obj.openConnection();
+con.setRequestMethod("GET");
+int responseCode = con.getResponseCode();
+BufferedReader in = new BufferedReader(
+    new InputStreamReader(con.getInputStream()));
+String inputLine;
+StringBuffer response = new StringBuffer();
+while ((inputLine = in.readLine()) != null) {
+    response.append(inputLine);
+}
+in.close();
+System.out.println(response.toString());
+
+```
+
+```go
+package main
+
+import (
+       "bytes"
+       "net/http"
+)
+
+func main() {
+
+    headers := map[string][]string{
+        "Accept": []string{"application/json"},
+        
+    }
+
+    data := bytes.NewBuffer([]byte{jsonReq})
+    req, err := http.NewRequest("GET", "http://example.com/all-of", data)
+    req.Header = headers
+
+    client := &http.Client{}
+    resp, err := client.Do(req)
+    // ...
+}
+
+```
+
+`GET /all-of`
+
+Retrieves an greeting
+
+> Example responses
+
+```json
+{
+  "description": "Successfull response",
+  "value": {
+    "greeting": "Hello!"
+  }
+}
+```
+
+<h3 id="getAllOf-responses">Responses</h3>
+
+|Status|Meaning|Description|Schema|
+|---|---|---|---|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|Responds with a greeting|Inline|
+
+<h3 id="getAllOf-responseschema">Response Schema</h3>
+
+Status Code **200**
+
+|Name|Type|Required|Description|
+|---|---|---|---|
+|» greeting|any|true|No description|
+
+*allOf*
+
+|»» *anonymous*|string|false|No description|
+
+*and*
 
 |»» *anonymous*|object|false|No description|
 |»»» message1|string|true|No description|

@@ -1,0 +1,32 @@
+{
+    "type": "object",
+    "properties": {
+        "greeting": {
+            "allOf": [
+                {
+                    "type": "string"
+                },
+                {
+                    "type": "object",
+                    "properties": {
+                        "message1": {
+                            "type": "string"
+                        },
+                        "message2": {
+                            "type": "string"
+                        }
+                    },
+                    "additionalProperties": false,
+                    "required": [
+                        "message1",
+                        "message2"
+                    ]
+                }
+            ]
+        }
+    },
+    "additionalProperties": false,
+    "required": [
+        "greeting"
+    ]
+}
