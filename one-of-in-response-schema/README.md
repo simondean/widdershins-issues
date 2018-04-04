@@ -1,4 +1,4 @@
-# Example of issue with response examples
+# Example of issue with oneOf/anyOf/allOf in response schema
 
 Run the following command to convert the `openapi.yaml` file into the `index.html` file.  
 
