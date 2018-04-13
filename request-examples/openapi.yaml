@@ -1,14 +1,7 @@
 openapi: 3.0.1
 info:
     title: Example API
-    description: |
-        Here is an example code block with attributes
-
-        ```json {.inline}
-        {
-            "greeting": "Hello!"
-        }
-        ```
+    description: Example API
     version: 1.0.0
 servers:
     - url: http://example.com
@@ -35,7 +28,7 @@ paths:
                             default:
                                 description: Successfull response
                                 value:
-                                    greeting: Hello!
+                                    greeting: Request!
                 required: true
             responses:
                 '200': 
@@ -54,4 +47,4 @@ paths:
                                 default:
                                     description: Successfull response
                                     value:
-                                        greeting: Hello!
+                                        greeting: Response!

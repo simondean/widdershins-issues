@@ -1,6 +1,6 @@
-# Example of new feature for using markdown attributes
+# Example of request examples issue
 
-This example uses shin's new `--attr` CLI argument.  
+This is an example for issue https://github.com/Mermade/widdershins/issues/112 
 
 Run the following command to convert the `openapi.yaml` file into the `index.html` file.  
 
