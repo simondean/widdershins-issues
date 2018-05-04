@@ -1,0 +1,56 @@
+openapi: 3.0.1
+info:
+    title: Example API
+    description: |
+        ## Example H2
+
+        ### Example H3
+
+        #### Example H4
+    version: 1.0.0
+servers:
+    - url: http://example.com
+      description: Example URL
+paths:
+    /greeting:
+        post: 
+            tags: [Endpoints]
+            description: Creates an greeting
+            operationId: getGreeting
+            summary: Get Greeting
+            requestBody: 
+                description: Contains the greeting to create
+                content: 
+                    application/json: 
+                        schema: 
+                            type: object
+                            properties:
+                                greeting: 
+                                    type: string
+                            additionalProperties: false
+                            required: 
+                                - greeting
+                        examples:
+                            default:
+                                description: Successfull response
+                                value:
+                                    greeting: Request!
+                required: true
+            responses:
+                '200': 
+                    description: Responds with a greeting
+                    content: 
+                        application/json:
+                            schema: 
+                                type: object
+                                properties:
+                                    greeting: 
+                                        type: string
+                                additionalProperties: false
+                                required: 
+                                    - greeting
+                            examples:
+                                default:
+                                    description: Successfull response
+                                    value:
+                                        greeting: Response!
