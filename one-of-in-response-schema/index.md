@@ -171,10 +171,7 @@ Retrieves an greeting
 
 ```json
 {
-  "description": "Successfull response",
-  "value": {
-    "greeting": "Hello!"
-  }
+  "greeting": "Hello!"
 }
 ```
 
@@ -194,10 +191,14 @@ Status Code **200**
 
 *oneOf*
 
+|Name|Type|Required|Description|
+|---|---|---|---|
 |»» *anonymous*|string|false|No description|
 
 *xor*
 
+|Name|Type|Required|Description|
+|---|---|---|---|
 |»» *anonymous*|object|false|No description|
 |»»» message1|string|true|No description|
 |»»» message2|string|true|No description|
@@ -348,10 +349,7 @@ Retrieves an greeting
 
 ```json
 {
-  "description": "Successfull response",
-  "value": {
-    "greeting": "Hello!"
-  }
+  "greeting": "Hello!"
 }
 ```
 
@@ -371,10 +369,14 @@ Status Code **200**
 
 *anyOf*
 
+|Name|Type|Required|Description|
+|---|---|---|---|
 |»» *anonymous*|string|false|No description|
 
 *or*
 
+|Name|Type|Required|Description|
+|---|---|---|---|
 |»» *anonymous*|object|false|No description|
 |»»» message1|string|true|No description|
 |»»» message2|string|true|No description|
@@ -525,10 +527,7 @@ Retrieves an greeting
 
 ```json
 {
-  "description": "Successfull response",
-  "value": {
-    "greeting": "Hello!"
-  }
+  "greeting": "Hello!"
 }
 ```
 
@@ -548,10 +547,14 @@ Status Code **200**
 
 *allOf*
 
+|Name|Type|Required|Description|
+|---|---|---|---|
 |»» *anonymous*|string|false|No description|
 
 *and*
 
+|Name|Type|Required|Description|
+|---|---|---|---|
 |»» *anonymous*|object|false|No description|
 |»»» message1|string|true|No description|
 |»»» message2|string|true|No description|

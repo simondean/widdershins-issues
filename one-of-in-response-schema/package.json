@@ -5,7 +5,7 @@
     "devDependencies": {
         "shins": "^2.2.1-3",
         "speccy": "^0.5.4",
-        "widdershins": "^3.2.0"
+        "widdershins": "git+https://github.com/Mermade/widdershins.git#427d641"
     },
     "dependencies": {}
 }
