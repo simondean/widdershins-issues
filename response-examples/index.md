@@ -171,10 +171,7 @@ Retrieves an greeting
 
 ```json
 {
-  "description": "Successfull response",
-  "value": {
-    "greeting": "Hello!"
-  }
+  "greeting": "Hello!"
 }
 ```
 
