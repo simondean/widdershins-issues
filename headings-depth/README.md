@@ -1,6 +1,6 @@
 # Example of request examples issue
 
-This is an example for issue https://github.com/Mermade/widdershins/issues/120
+This was an example for issue https://github.com/Mermade/widdershins/issues/120 which has since been fixed.  
 
 # Regenerating the Slate HTML
 
