@@ -1,10 +1,10 @@
-# Example of request examples issue
+# Widdershins Example
 
-This was an example for issue https://github.com/Mermade/widdershins/issues/112 
+This was an example for https://github.com/Mermade/widdershins/issues/112 
 
 The issue has been fixed in widdershins v3.2.3
 
-# Regenerating the Slate HTML
+## Regenerating the Slate HTML
 
 Run the following command to convert the `openapi.yaml` file into the `index.html` file.  
 
