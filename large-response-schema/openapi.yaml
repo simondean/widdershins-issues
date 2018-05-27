@@ -1,0 +1,26 @@
+openapi: 3.0.1
+info:
+    title: Example API
+    description: This is an example API
+    version: 1.0.0
+servers:
+    - url: http://example.com
+      description: Example URL
+paths:
+    /cars:
+        get: 
+            tags: [Endpoints]
+            description: Retrieves all cars
+            operationId: getCars
+            responses:
+                '200': 
+                    description: Responds with the details of all cars
+                    content: 
+                        application/json:
+                            schema: 
+                                $ref: schemas/get-cars/response/200.json
+                            examples:
+                                default:
+                                    description: Successfull response
+                                    value:
+                                        $ref: examples/get-cars/response/200/default.json

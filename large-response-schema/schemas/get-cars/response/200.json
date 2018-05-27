@@ -1,0 +1,92 @@
+{
+    "type": "object",
+    "properties": {
+        "vehicles": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "description": "Example description",
+                "properties": {
+                    "id": {
+                        "type": "string",
+                        "description": "Example description"
+                    },
+                    "wheels": {
+                        "type": "array",
+                        "items": {
+                            "type": "object",
+                            "description": "Example description",
+                            "properties": {
+                                "width": {
+                                    "type": "integer",
+                                    "description": "Example description"
+                                },
+                                "aspectRatio": {
+                                    "type": "integer",
+                                    "description": "Example description"
+                                },
+                                "diameter": {
+                                    "type": "integer",
+                                    "description": "Example description"
+                                }
+                            },
+                            "additionalProperties": false,
+                            "required": [
+                                "width",
+                                "aspectRatio",
+                                "diameter"
+                            ]
+                        }
+                    },
+                    "doors": {
+                        "type": "array",
+                        "items": {
+                            "type": "object",
+                            "description": "Example description",
+                            "properties": {
+                                "electricWindow": {
+                                    "type": "boolean",
+                                    "description": "Example description"
+                                }
+                            },
+                            "additionalProperties": false,
+                            "required": [
+                                "electricWindow"
+                            ]
+                        }
+                    },
+                    "engine": {
+                        "type": "object",
+                        "description": "Example description",
+                        "properties": {
+                            "fuel": {
+                                "type": "string",
+                                "description": "Example description"
+                            },
+                            "capacity": {
+                                "type": "number",
+                                "description": "Example description"
+                            }
+                        },
+                        "additionalProperties": false,
+                        "required": [
+                            "fuel",
+                            "capacity"
+                        ]
+                    }
+                },
+                "additionalProperties": false,
+                "required": [
+                    "id",
+                    "wheels",
+                    "doors",
+                    "engine"
+                ]
+            }
+        }
+    },
+    "additionalProperties": false,
+    "required": [
+        "vehicles"
+    ]
+}

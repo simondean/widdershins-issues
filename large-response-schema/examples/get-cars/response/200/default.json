@@ -1,0 +1,41 @@
+{
+    "vehicles": [
+        {
+            "id": "",
+            "wheels": [
+                {
+                    "width": 235,
+                    "aspectRatio": 35,
+                    "diameter": 19
+                },
+                {
+                    "width": 235,
+                    "aspectRatio": 35,
+                    "diameter": 19
+                },
+                {
+                    "width": 305,
+                    "aspectRatio": 30,
+                    "diameter": 19
+                },
+                {
+                    "width": 305,
+                    "aspectRatio": 30,
+                    "diameter": 19
+                }
+            ],
+            "doors": [
+                {
+                    "electricWindow": true
+                },
+                {
+                    "electricWindow": true
+                }
+            ],
+            "engine": {
+                "fuel": "petrol",
+                "capacity": 3.8
+            }
+        }
+    ]
+}
