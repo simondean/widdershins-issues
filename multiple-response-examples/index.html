@@ -7,7 +7,7 @@
     <meta charset="utf-8">
     <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <title>Example API v1.0.0</title>
+    <title>Example API</title>
 
     <style>
     </style>
@@ -1685,11 +1685,21 @@ System.out.println(response.toString());
 <blockquote>
 <p>Example responses</p>
 </blockquote>
+<blockquote>
+<p>Successfull response</p>
+</blockquote>
 <pre class="highlight tab tab-json"><code>{
   <span class="hljs-attr">"greeting"</span>: <span class="hljs-string">"Hello!"</span>
 }
 </code></pre>
-<h3 id="getGreeting-responses">Responses</h3>
+<blockquote>
+<p>Alternate successfull response</p>
+</blockquote>
+<pre class="highlight tab tab-json"><code>{
+  <span class="hljs-attr">"greeting"</span>: <span class="hljs-string">"Bonjour!"</span>
+}
+</code></pre>
+<h3 id="getgreeting-responses">Responses</h3>
 <table>
 <thead>
 <tr>
@@ -1708,7 +1718,7 @@ System.out.println(response.toString());
 </tr>
 </tbody>
 </table>
-<h3 id="getGreeting-responseschema">Response Schema</h3>
+<h3 id="getgreeting-responseschema">Response Schema</h3>
 <p>Status Code <strong>200</strong></p>
 <table>
 <thead>
@@ -1716,6 +1726,7 @@ System.out.println(response.toString());
 <th>Name</th>
 <th>Type</th>
 <th>Required</th>
+<th>Restrictions</th>
 <th>Description</th>
 </tr>
 </thead>
@@ -1724,7 +1735,8 @@ System.out.println(response.toString());
 <td>» greeting</td>
 <td>string</td>
 <td>true</td>
-<td>No description</td>
+<td>none</td>
+<td>none</td>
 </tr>
 </tbody>
 </table>

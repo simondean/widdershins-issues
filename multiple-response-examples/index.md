@@ -1,5 +1,5 @@
 ---
-title: Example API v1.0.0
+title: Example API
 language_tabs:
   - shell: Shell
   - http: HTTP
@@ -169,25 +169,35 @@ Retrieves an greeting
 
 > Example responses
 
+> Successfull response
+
 ```json
 {
   "greeting": "Hello!"
 }
 ```
 
-<h3 id="getGreeting-responses">Responses</h3>
+> Alternate successfull response
+
+```json
+{
+  "greeting": "Bonjour!"
+}
+```
+
+<h3 id="getgreeting-responses">Responses</h3>
 
 |Status|Meaning|Description|Schema|
 |---|---|---|---|
 |200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|Responds with a greeting|Inline|
 
-<h3 id="getGreeting-responseschema">Response Schema</h3>
+<h3 id="getgreeting-responseschema">Response Schema</h3>
 
 Status Code **200**
 
-|Name|Type|Required|Description|
-|---|---|---|---|
-|» greeting|string|true|No description|
+|Name|Type|Required|Restrictions|Description|
+|---|---|---|---|---|
+|» greeting|string|true|none|none|
 
 <aside class="success">
 This operation does not require authentication
