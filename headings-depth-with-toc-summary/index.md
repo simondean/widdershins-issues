@@ -1,5 +1,5 @@
 ---
-title: Example API v1.0.0
+title: Example API
 language_tabs:
   - shell: Shell
   - http: HTTP
@@ -189,14 +189,16 @@ Creates an greeting
 }
 ```
 
-<h3 id="Get Greeting-parameters">Parameters</h3>
+<h3 id="get-greeting-parameters">Parameters</h3>
 
 |Parameter|In|Type|Required|Description|
 |---|---|---|---|---|
 |body|body|object|true|Contains the greeting to create|
-|» greeting|body|string|true|No description|
+|» greeting|body|string|true|none|
 
 > Example responses
+
+> Successfull response
 
 ```json
 {
@@ -204,19 +206,19 @@ Creates an greeting
 }
 ```
 
-<h3 id="Get Greeting-responses">Responses</h3>
+<h3 id="get-greeting-responses">Responses</h3>
 
 |Status|Meaning|Description|Schema|
 |---|---|---|---|
 |200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|Responds with a greeting|Inline|
 
-<h3 id="Get Greeting-responseschema">Response Schema</h3>
+<h3 id="get-greeting-responseschema">Response Schema</h3>
 
 Status Code **200**
 
-|Name|Type|Required|Description|
-|---|---|---|---|
-|» greeting|string|true|No description|
+|Name|Type|Required|Restrictions|Description|
+|---|---|---|---|---|
+|» greeting|string|true|none|none|
 
 <aside class="success">
 This operation does not require authentication

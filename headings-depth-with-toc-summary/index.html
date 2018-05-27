@@ -7,7 +7,7 @@
     <meta charset="utf-8">
     <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <title>Example API v1.0.0</title>
+    <title>Example API</title>
 
     <style>
     </style>
@@ -1608,15 +1608,15 @@ e.Index.prototype.use=function(e){var t=Array.prototype.slice.call(arguments,1);
                       <ul class="toc-list-h3">
                       
                       <li>
-                        <a href="#Get Greeting-parameters" class="toc-h3 toc-link" data-title="Parameters">Parameters</a>
+                        <a href="#get-greeting-parameters" class="toc-h3 toc-link" data-title="Parameters">Parameters</a>
                       </li>
                       
                       <li>
-                        <a href="#Get Greeting-responses" class="toc-h3 toc-link" data-title="Responses">Responses</a>
+                        <a href="#get-greeting-responses" class="toc-h3 toc-link" data-title="Responses">Responses</a>
                       </li>
                       
                       <li>
-                        <a href="#Get Greeting-responseschema" class="toc-h3 toc-link" data-title="Response Schema">Response Schema</a>
+                        <a href="#get-greeting-responseschema" class="toc-h3 toc-link" data-title="Response Schema">Response Schema</a>
                       </li>
                       
                     </ul>
@@ -1787,7 +1787,7 @@ System.out.println(response.toString());
   <span class="hljs-attr">"greeting"</span>: <span class="hljs-string">"Request!"</span>
 }
 </code></pre>
-<h3 id="Get Greeting-parameters">Parameters</h3>
+<h3 id="get-greeting-parameters">Parameters</h3>
 <table>
 <thead>
 <tr>
@@ -1811,18 +1811,21 @@ System.out.println(response.toString());
 <td>body</td>
 <td>string</td>
 <td>true</td>
-<td>No description</td>
+<td>none</td>
 </tr>
 </tbody>
 </table>
 <blockquote>
 <p>Example responses</p>
 </blockquote>
+<blockquote>
+<p>Successfull response</p>
+</blockquote>
 <pre class="highlight tab tab-json"><code>{
   <span class="hljs-attr">"greeting"</span>: <span class="hljs-string">"Response!"</span>
 }
 </code></pre>
-<h3 id="Get Greeting-responses">Responses</h3>
+<h3 id="get-greeting-responses">Responses</h3>
 <table>
 <thead>
 <tr>
@@ -1841,7 +1844,7 @@ System.out.println(response.toString());
 </tr>
 </tbody>
 </table>
-<h3 id="Get Greeting-responseschema">Response Schema</h3>
+<h3 id="get-greeting-responseschema">Response Schema</h3>
 <p>Status Code <strong>200</strong></p>
 <table>
 <thead>
@@ -1849,6 +1852,7 @@ System.out.println(response.toString());
 <th>Name</th>
 <th>Type</th>
 <th>Required</th>
+<th>Restrictions</th>
 <th>Description</th>
 </tr>
 </thead>
@@ -1857,7 +1861,8 @@ System.out.println(response.toString());
 <td>» greeting</td>
 <td>string</td>
 <td>true</td>
-<td>No description</td>
+<td>none</td>
+<td>none</td>
 </tr>
 </tbody>
 </table>
