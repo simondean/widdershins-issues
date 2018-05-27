@@ -1,6 +1,6 @@
 # Example of issue with response examples
 
-This is an example for https://github.com/Mermade/widdershins/issues/111
+This was an example for https://github.com/Mermade/widdershins/issues/111 which is a new feature that has since been added to Widdershins.  
 
 # Regenerating the Slate HTML
 
