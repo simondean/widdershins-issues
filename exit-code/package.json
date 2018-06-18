@@ -1,0 +1,11 @@
+{
+    "scripts": {
+        "build": "cp -r pub/ node_modules/shins/pub/ && shins index.md -o index.html --inline --attr --customcss"
+    },
+    "devDependencies": {
+        "shins": "git+https://github.com/Mermade/shins.git#a08ebe3",
+        "speccy": "^0.5.4",
+        "widdershins": "^3.2.0"
+    },
+    "dependencies": {}
+}
